@@ -156,6 +156,11 @@ class Game {
     document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
   }
 
+  openGame() {
+    document.getElementById("game").style.display = "none";
+    document.getElementById("shop").style.display = "block";
+  }
+
 }
 
 const game = new Game();
@@ -187,4 +192,7 @@ document.getElementById("save-game").addEventListener("click", () => {
 });
 document.getElementById("load-game").addEventListener("click", () => {
   game.loadGame();
+});
+document.getElementById("open-shop").addEventListener("click", () => {
+  game.openGame();
 });
