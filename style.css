@@ -19,13 +19,18 @@ body {
     background-image: url("./res/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
+
+h1 {
+    font-weight: 100;
+    padding: 20px;
+}
   
 #game {
     background-color: #fff;
     border-radius: 3%;
     width: 500px;
-    height: 550px;
+    height: 630px;
     margin: 0 auto;
     text-align: center;
 }
