@@ -17,6 +17,14 @@
 
 const COST_INCREMENT = 1.2;
 
+const skinPrices = {
+  "cookie": 0,
+  "skin1": 500,
+  "skin2": 5000,
+  "skin3": 25000
+};
+const skinImages = ["cookie.png", "skin1.png", "skin2.png", "skin3.png"];
+
 class Game {
   constructor() {
     this.cookies = 0;
@@ -156,9 +164,21 @@ class Game {
     document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
   }
 
-  openGame() {
+  openShop() {
     document.getElementById("game").style.display = "none";
     document.getElementById("shop").style.display = "block";
+  }
+
+  closeShop() {
+    document.getElementById("shop").style.display = "none";
+    document.getElementById("game").style.display = "block";
+  }
+
+  buySkin(skin) {
+    if (this.cookies >= skinPrices[skin]) {
+      this.cookies -= skinPrices[skin];
+      document.getElementById("cookie").src = `res/${skin}.png`;
+    }
   }
 
 }
@@ -194,5 +214,8 @@ document.getElementById("load-game").addEventListener("click", () => {
   game.loadGame();
 });
 document.getElementById("open-shop").addEventListener("click", () => {
-  game.openGame();
+  game.openShop();
+});
+document.getElementById("close-shop").addEventListener("click", () => {
+  game.closeShop();
 });
