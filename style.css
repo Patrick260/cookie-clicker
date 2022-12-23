@@ -16,7 +16,7 @@
 */
 
 body {
-    background-image: url('res/background.png');
+    background-image: url("res/background.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
