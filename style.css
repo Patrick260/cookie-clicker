@@ -25,6 +25,28 @@ h1 {
     font-weight: 100;
     padding: 20px;
 }
+
+button {
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 5px;
+    border-color: aqua;
+    background-color: rgb(230, 180, 14);
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+}
+
+button:hover {
+    background-color: rgb(110, 86, 8);
+}
+
+button:active {
+    transform: translateY(1px);
+}
   
 #game {
     background-color: #fff;
@@ -74,26 +96,5 @@ h1 {
   
 #upgrades .upgrade p {
     margin: 0;
-}
-  
-#upgrades .upgrade button {
-    display: block;
-    margin: 10px auto 0 auto;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f5c6cb;
-    color: #721c24;
-    font-size: 16px;
-    cursor: pointer;
-}
-  
-#upgrades .upgrade button:hover {
-    background-color: #721c24;
-    color: #f5c6cb;
-}
-  
-#upgrades .upgrade button:active {
-    transform: translateY(1px);
 }
   
