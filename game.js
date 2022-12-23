@@ -41,6 +41,12 @@ class Game {
     this.grandmaRate = 1;
     this.bakeryRate = 10;
     this.timeMachineRate = 100;
+
+    this.ownedSkins = {
+      "skin1": false,
+      "skin2": false,
+      "skin3": false
+    };
   }
 
   updateCookieCount() {
@@ -175,8 +181,13 @@ class Game {
   }
 
   buySkin(skin) {
-    if (this.cookies >= skinPrices[skin]) {
-      this.cookies -= skinPrices[skin];
+    if (!this.ownedSkins[skin]) {
+      if (this.cookies >= skinPrices[skin]) {
+        this.cookies -= skinPrices[skin];
+        this.ownedSkins[skin] = true;
+        document.getElementById("cookie").src = `res/${skin}.png`;
+      }
+    } else {
       document.getElementById("cookie").src = `res/${skin}.png`;
     }
   }
