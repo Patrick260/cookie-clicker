@@ -96,7 +96,7 @@ class Game {
       
       this.timeMachineCount += 1;
 
-      this.timeMachineCost = Number((this.timeMachineCost * COST_INCREMENT).toFixed(0));
+      this.timeMachineCost = Math.max(10000, Math.min(Number((this.timeMachineCost * COST_INCREMENT).toFixed(0)), 90000));
       
       document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
       document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
