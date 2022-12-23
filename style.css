@@ -1,0 +1,94 @@
+/*
+    Copyright (C) 2022  Patrick260
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+body {
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+#game {
+    background-color: #fff;
+    border-radius: 3%;
+    width: 500px;
+    height: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+#cookie-container {
+    display: inline-block;
+    position: relative;
+}
+  
+#cookie {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+  
+#cookie-count {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+#upgrades {
+    margin-top: 20px;
+}
+  
+.upgrade {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin: 0 10px;
+    text-align: left;
+}
+  
+.upgrade h3 {
+    margin: 0 0 10px 0;
+}
+  
+#upgrades .upgrade p {
+    margin: 0;
+}
+  
+#upgrades .upgrade button {
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5c6cb;
+    color: #721c24;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+#upgrades .upgrade button:hover {
+    background-color: #721c24;
+    color: #f5c6cb;
+}
+  
+#upgrades .upgrade button:active {
+    transform: translateY(1px);
+}
+  
