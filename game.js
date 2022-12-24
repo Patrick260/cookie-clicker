@@ -146,6 +146,7 @@ class Game {
     localStorage.setItem("grandmaCost", this.grandmaCost);
     localStorage.setItem("bakeryCost", this.bakeryCost);
     localStorage.setItem("timeMachineCost", this.timeMachineCost);
+    localStorage.setItem("ownedSkins", JSON.stringify(this.ownedSkins));
   }
 
   loadGame() {
@@ -158,6 +159,7 @@ class Game {
     this.grandmaCost = Number(localStorage.getItem("grandmaCost"));
     this.bakeryCost = Number(localStorage.getItem("bakeryCost"));
     this.timeMachineCost = Number(localStorage.getItem("timeMachineCost"));
+    this.ownedSkins = JSON.parse(localStorage.getItem("ownedSkins"));
 
     document.getElementById("cursor-multiplier").innerHTML = `${this.cursorCount + 1}`;
     document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
