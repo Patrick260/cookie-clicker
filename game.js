@@ -61,7 +61,7 @@ class Game {
   }
 
   clickCookie() {
-    this.cookies += (this.cursorCount + 1) * this.prestigeLevel;
+    this.cookies += (this.cursorCount + 1) * this.prestigeMultiplier;
     
     document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
   }
