@@ -55,16 +55,13 @@ button:active {
     background-color: #fff;
     border-radius: 3%;
     width: 500px;
-    height: 760px;
+    height: 790px;
     margin: 0 auto;
     text-align: center;
 }
 
-#prestige {
-    margin-bottom: 5px;
-}
-
 #prestige button {
+    margin-bottom: 10px;
     width: 80px;
 }
 

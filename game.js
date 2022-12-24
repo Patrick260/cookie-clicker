@@ -48,16 +48,20 @@ class Game {
       "skin2": false,
       "skin3": false
     };
+
+    this.prestigeLevel = 0;
+    this.prestigeMultiplier = 1;
+    this.prestigeCost = 1000;
   }
 
   updateCookieCount() {
-    this.cookies += this.grandmaCount * this.grandmaRate + this.bakeryCount * this.bakeryRate;
+    this.cookies += (this.grandmaCount * this.grandmaRate + this.bakeryCount * this.bakeryRate) * this.prestigeMultiplier;
     
     document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
   }
 
   clickCookie() {
-    this.cookies += this.cursorCount + 1;
+    this.cookies += (this.cursorCount + 1) * this.prestigeLevel;
     
     document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
   }
@@ -205,6 +209,19 @@ class Game {
     this.currentSkin = "cookie";
   }
 
+  prestige() {
+    if (this.cookies >= this.prestigeCost) {
+      this.cookies = 0;
+      this.prestigeLevel += 1;
+      this.prestigeMultiplier *= 2;
+      this.prestigeCost *= 2;
+
+      document.getElementById("prestige-level").innerHTML = this.prestigeLevel;
+      document.getElementById("prestige-multiplier").innerHTML = this.prestigeMultiplier;
+      document.getElementById("prestige-cost").innerHTML = this.prestigeCost;
+    }
+  }
+
 }
 
 const game = new Game();
@@ -246,4 +263,7 @@ document.getElementById("close-shop").addEventListener("click", () => {
 });
 document.getElementById("reset-skin").addEventListener("click", () => {
   game.resetSkin();
+});
+document.getElementById("prestige-button").addEventListener("click", () => {
+  game.prestige();
 });
