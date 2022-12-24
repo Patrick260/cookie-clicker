@@ -85,7 +85,7 @@ class Game {
         unlocked: false
       },
       {
-        name: "Pro",
+        name: "Cookie Tycoon",
         description: "Click 10.000 cookies",
         unlocked: false
       },
