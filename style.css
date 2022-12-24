@@ -58,7 +58,44 @@ button:active {
     height: 790px;
     margin: 0 auto;
     text-align: center;
+    display: none;
 }
+
+#start-screen {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    margin: auto;
+  }
+  
+  #start-screen h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  #start-screen p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #start-button {
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #start-button:hover {
+    background-color: darkblue;
+  }
 
 #prestige button {
     margin-bottom: 10px;

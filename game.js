@@ -445,3 +445,7 @@ document.getElementById("reset-skin").addEventListener("click", () => {
 document.getElementById("prestige-button").addEventListener("click", () => {
   game.prestige();
 });
+document.getElementById("start-button").addEventListener("click", function() {
+  document.getElementById("start-screen").style.display = "none";
+  document.getElementById("game").style.display = "block";
+});
