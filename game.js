@@ -194,6 +194,10 @@ class Game {
     }
   }
 
+  resetSkin() {
+    document.getElementById("cookie").src = `res/cookie.png`;
+  }
+
 }
 
 const game = new Game();
@@ -231,4 +235,7 @@ document.getElementById("open-shop").addEventListener("click", () => {
 });
 document.getElementById("close-shop").addEventListener("click", () => {
   game.closeShop();
+});
+document.getElementById("reset-skin").addEventListener("click", () => {
+  game.resetSkin();
 });
