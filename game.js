@@ -208,6 +208,7 @@ class Game {
 }
 
 const game = new Game();
+game.saveGame();
 
 setInterval(() => {
   game.updateCookieCount();
