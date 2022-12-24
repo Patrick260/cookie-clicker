@@ -223,13 +223,32 @@ class Game {
   prestige() {
     if (this.cookies >= this.prestigeCost) {
       this.cookies = 0;
+
+      this.cursorCount = 0;
+      this.cursorCost = 10;
+      this.grandmaCount = 0;
+      this.grandmaCost = 100;
+      this.bakeryCount = 0;
+      this.bakeryCost = 1000;
+      this.timeMachineCount = 0;
+      this.timeMachineCost = 10000;
+
       this.prestigeLevel += 1;
       this.prestigeMultiplier *= 2;
       this.prestigeCost *= 2;
 
-      document.getElementById("prestige-level").innerHTML = this.prestigeLevel;
-      document.getElementById("prestige-multiplier").innerHTML = this.prestigeMultiplier;
-      document.getElementById("prestige-cost").innerHTML = this.prestigeCost;
+      document.getElementById("prestige-level").innerHTML = `${this.prestigeLevel}`;
+      document.getElementById("prestige-multiplier").innerHTML = `${this.prestigeMultiplier}`;
+      document.getElementById("prestige-cost").innerHTML = `${this.prestigeCost}`;
+
+      document.getElementById("cursor-multiplier").innerHTML = `${this.cursorCount + 1}`;
+      document.getElementById("cursor-cost").innerHTML = `${this.cursorCost}`;
+      document.getElementById("grandma-count").innerHTML = `${this.grandmaCount}`;
+      document.getElementById("grandma-cost").innerHTML = `${this.grandmaCost}`;
+      document.getElementById("bakery-count").innerHTML = `${this.bakeryCount}`;
+      document.getElementById("bakery-cost").innerHTML = `${this.bakeryCost}`;
+      document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
+      document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
     }
   }
 
