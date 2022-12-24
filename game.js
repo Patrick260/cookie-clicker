@@ -42,6 +42,7 @@ class Game {
     this.bakeryRate = 10;
     this.timeMachineRate = 100;
 
+    this.currentSkin = "cookie";
     this.ownedSkins = {
       "skin1": false,
       "skin2": false,
@@ -146,6 +147,7 @@ class Game {
     localStorage.setItem("grandmaCost", this.grandmaCost);
     localStorage.setItem("bakeryCost", this.bakeryCost);
     localStorage.setItem("timeMachineCost", this.timeMachineCost);
+    localStorage.setItem("currentSkin", this.currentSkin);
     localStorage.setItem("ownedSkins", JSON.stringify(this.ownedSkins));
   }
 
@@ -159,6 +161,7 @@ class Game {
     this.grandmaCost = Number(localStorage.getItem("grandmaCost"));
     this.bakeryCost = Number(localStorage.getItem("bakeryCost"));
     this.timeMachineCost = Number(localStorage.getItem("timeMachineCost"));
+    this.currentSkin = localStorage.getItem("currentSkin");
     this.ownedSkins = JSON.parse(localStorage.getItem("ownedSkins"));
 
     document.getElementById("cursor-multiplier").innerHTML = `${this.cursorCount + 1}`;
@@ -170,6 +173,7 @@ class Game {
     document.getElementById("bakery-cost").innerHTML = `${this.bakeryCost}`;
     document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
     document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
+    document.getElementById("cookie").src = `res/${this.currentSkin}.png`;
   }
 
   openShop() {
@@ -192,10 +196,13 @@ class Game {
     } else {
       document.getElementById("cookie").src = `res/${skin}.png`;
     }
+
+    this.currentSkin = skin;
   }
 
   resetSkin() {
     document.getElementById("cookie").src = `res/cookie.png`;
+    this.currentSkin = "cookie";
   }
 
 }
