@@ -52,6 +52,80 @@ class Game {
     this.prestigeLevel = 0;
     this.prestigeMultiplier = 1;
     this.prestigeCost = 1000;
+
+    this.achievements = [
+      {
+        name: "Beginner",
+        description: "Click your first cookie",
+        unlocked: false
+      },
+      {
+        name: "You understood it",
+        description: "Click 10 cookies",
+        unlocked: false
+      },
+      {
+        name: "100",
+        description: "Click 100 cookies",
+        unlocked: false
+      },
+      {
+        name: "3 zeros",
+        description: "Click 1.000 cookies",
+        unlocked: false
+      },
+      {
+        name: "7!",
+        description: "Click 5.040 cookies",
+        unlocked: false
+      },
+      {
+        name: "UwU",
+        description: "Click 6.969 cookies",
+        unlocked: false
+      },
+      {
+        name: "Pro",
+        description: "Click 10.000 cookies",
+        unlocked: false
+      },
+      {
+        name: "Do you have a life?",
+        description: "Click 50.000 cookies",
+        unlocked: false
+      },
+      {
+        name: "Cookie-Clicker Addicted",
+        description: "Click 100.000 cookies",
+        unlocked: false
+      },
+      {
+        name: "Shopper",
+        description: "Buy your first cursor",
+        unlocked: false
+      },
+      {
+        name: "Grandson",
+        description: "Buy your first grandma",
+        unlocked: false
+      },
+      {
+        name: "Baker",
+        description: "Buy your first baker",
+        unlocked: false
+      },
+      {
+        name: "Time-Machine",
+        description: "Buy your first time-machine",
+        unlocked: false
+      },
+      {
+        name: "Time traveller",
+        description: "Use a time-machine",
+        unlocked: false
+      }
+    ];
+    
   }
 
   updateCookieCount() {
