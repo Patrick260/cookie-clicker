@@ -55,22 +55,22 @@ class Game {
 
     this.achievements = [
       {
-        name: "Beginner",
+        name: "The Start of Something Sweet",
         description: "Click your first cookie",
         unlocked: false
       },
       {
-        name: "You understood it",
+        name: "Clicking Newbie",
         description: "Click 10 cookies",
         unlocked: false
       },
       {
-        name: "100",
+        name: "Finger Twister",
         description: "Click 100 cookies",
         unlocked: false
       },
       {
-        name: "3 zeros",
+        name: "Cookie Connoisseur",
         description: "Click 1.000 cookies",
         unlocked: false
       },
@@ -95,13 +95,28 @@ class Game {
         unlocked: false
       },
       {
-        name: "Cookie-Clicker Addicted",
+        name: "Clickaholic",
         description: "Click 100.000 cookies",
         unlocked: false
       },
       {
-        name: "Shopper",
+        name: "Clickity Click",
         description: "Buy your first cursor",
+        unlocked: false
+      },
+      {
+        name: "Cursor Collector",
+        description: "Buy 10 cursors",
+        unlocked: false
+      },
+      {
+        name: "Cursor Tycoon",
+        description: "Buy 50 cursors",
+        unlocked: false
+      },
+      {
+        name: "Master of the Mouse",
+        description: "Buy 100 cursors",
         unlocked: false
       },
       {
@@ -110,8 +125,38 @@ class Game {
         unlocked: false
       },
       {
+        name: "Grandma's Favorite",
+        description: "Buy 10 grandmas",
+        unlocked: false
+      },
+      {
+        name: "Big Family",
+        description: "Buy 25 grandmas",
+        unlocked: false
+      },
+      {
+        name: "Family Business",
+        description: "Buy 50 grandmas",
+        unlocked: false
+      },
+      {
         name: "Baker",
-        description: "Buy your first baker",
+        description: "Buy your first bakery",
+        unlocked: false
+      },
+      {
+        name: "Delicious Dreams",
+        description: "Buy 10 bakeries",
+        unlocked: false
+      },
+      {
+        name: "Great Baker",
+        description: "Buy 25 bakeries",
+        unlocked: false
+      },
+      {
+        name: "Bakery Baron",
+        description: "Buy 50 bakeries",
         unlocked: false
       },
       {
@@ -120,8 +165,38 @@ class Game {
         unlocked: false
       },
       {
-        name: "Time traveller",
-        description: "Use a time-machine",
+        name: "Time-Machines",
+        description: "Buy 10 time-machines",
+        unlocked: false
+      },
+      {
+        name: "The Timekeeper",
+        description: "Buy 50 time-machines",
+        unlocked: false
+      },
+      {
+        name: "Timeless Tycoon",
+        description: "Buy 100 time-machines",
+        unlocked: false
+      },
+      {
+        name: "Time Traveler",
+        description: "Use your first time-machine",
+        unlocked: false
+      },
+      {
+        name: "Temporal Explorer",
+        description: "Use 10 time-machines",
+        unlocked: false
+      },
+      {
+        name: "Chrono Crusader",
+        description: "Use 50 time-machines",
+        unlocked: false
+      },
+      {
+        name: "Timeless Adventurer",
+        description: "Use 100 time-machines",
         unlocked: false
       }
     ];
@@ -204,7 +279,7 @@ class Game {
       document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
       
       const timeMachineInterval = setInterval(() => {
-        this.cookies += this.timeMachineRate;
+        this.cookies += this.timeMachineRate * this.prestigeMultiplier;
         document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
       }, 1000);
       
