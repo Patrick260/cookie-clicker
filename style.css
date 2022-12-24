@@ -33,8 +33,9 @@ button {
     border: 5px;
     background-color: rgb(230, 180, 14);
     border-radius: 10px;
-    width: 50px;
+    width: 60px;
     height: 30px;
+    text-align: center;
 }
 
 button:hover {
@@ -54,9 +55,17 @@ button:active {
     background-color: #fff;
     border-radius: 3%;
     width: 500px;
-    height: 650px;
+    height: 760px;
     margin: 0 auto;
     text-align: center;
+}
+
+#prestige {
+    margin-bottom: 5px;
+}
+
+#prestige button {
+    width: 80px;
 }
 
 #shop {
