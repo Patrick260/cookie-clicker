@@ -156,28 +156,30 @@ class Game {
   }
 
   loadGame() {
-    this.cookies = Number(localStorage.getItem("cookies"));
-    this.cursorCount = Number(localStorage.getItem("cursorCount"));
-    this.grandmaCount = Number(localStorage.getItem("grandmaCount"));
-    this.bakeryCount = Number(localStorage.getItem("bakeryCount"));
-    this.timeMachineCount = Number(localStorage.getItem("timeMachineCount"));
-    this.cursorCost = Number(localStorage.getItem("cursorCost"));
-    this.grandmaCost = Number(localStorage.getItem("grandmaCost"));
-    this.bakeryCost = Number(localStorage.getItem("bakeryCost"));
-    this.timeMachineCost = Number(localStorage.getItem("timeMachineCost"));
-    this.currentSkin = localStorage.getItem("currentSkin");
-    this.ownedSkins = JSON.parse(localStorage.getItem("ownedSkins"));
-
-    document.getElementById("cursor-multiplier").innerHTML = `${this.cursorCount + 1}`;
-    document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
-    document.getElementById("cursor-cost").innerHTML = `${this.cursorCost}`;
-    document.getElementById("grandma-count").innerHTML = `${this.grandmaCount}`;
-    document.getElementById("grandma-cost").innerHTML = `${this.grandmaCost}`;
-    document.getElementById("bakery-count").innerHTML = `${this.bakeryCount}`;
-    document.getElementById("bakery-cost").innerHTML = `${this.bakeryCost}`;
-    document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
-    document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
-    document.getElementById("cookie").src = `res/${this.currentSkin}.png`;
+    if (localStorage.getItem("cursorCost") > 0) {
+      this.cookies = Number(localStorage.getItem("cookies"));
+      this.cursorCount = Number(localStorage.getItem("cursorCount"));
+      this.grandmaCount = Number(localStorage.getItem("grandmaCount"));
+      this.bakeryCount = Number(localStorage.getItem("bakeryCount"));
+      this.timeMachineCount = Number(localStorage.getItem("timeMachineCount"));
+      this.cursorCost = Number(localStorage.getItem("cursorCost"));
+      this.grandmaCost = Number(localStorage.getItem("grandmaCost"));
+      this.bakeryCost = Number(localStorage.getItem("bakeryCost"));
+      this.timeMachineCost = Number(localStorage.getItem("timeMachineCost"));
+      this.currentSkin = localStorage.getItem("currentSkin");
+      this.ownedSkins = JSON.parse(localStorage.getItem("ownedSkins"));
+  
+      document.getElementById("cursor-multiplier").innerHTML = `${this.cursorCount + 1}`;
+      document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
+      document.getElementById("cursor-cost").innerHTML = `${this.cursorCost}`;
+      document.getElementById("grandma-count").innerHTML = `${this.grandmaCount}`;
+      document.getElementById("grandma-cost").innerHTML = `${this.grandmaCost}`;
+      document.getElementById("bakery-count").innerHTML = `${this.bakeryCount}`;
+      document.getElementById("bakery-cost").innerHTML = `${this.bakeryCost}`;
+      document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
+      document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
+      document.getElementById("cookie").src = `res/${this.currentSkin}.png`;
+    }
   }
 
   openShop() {
@@ -225,7 +227,6 @@ class Game {
 }
 
 const game = new Game();
-game.saveGame();
 
 setInterval(() => {
   game.updateCookieCount();
