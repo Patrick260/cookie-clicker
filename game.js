@@ -153,6 +153,9 @@ class Game {
     localStorage.setItem("timeMachineCost", this.timeMachineCost);
     localStorage.setItem("currentSkin", this.currentSkin);
     localStorage.setItem("ownedSkins", JSON.stringify(this.ownedSkins));
+    localStorage.setItem("prestigeLevel", this.prestigeLevel);
+    localStorage.setItem("prestigeMultiplier", this.prestigeMultiplier);
+    localStorage.setItem("prestigeCost", this.prestigeCost);
   }
 
   loadGame() {
@@ -168,6 +171,9 @@ class Game {
       this.timeMachineCost = Number(localStorage.getItem("timeMachineCost"));
       this.currentSkin = localStorage.getItem("currentSkin");
       this.ownedSkins = JSON.parse(localStorage.getItem("ownedSkins"));
+      this.prestigeLevel = Number(localStorage.getItem("prestigeLevel"));
+      this.prestigeMultiplier = Number(localStorage.getItem("prestigeMultiplier"));
+      this.prestigeCost = Number(localStorage.getItem("prestigeCost"));
   
       document.getElementById("cursor-multiplier").innerHTML = `${this.cursorCount + 1}`;
       document.getElementById("cookie-count").innerHTML = `${this.cookies}`;
@@ -179,6 +185,9 @@ class Game {
       document.getElementById("time-machine-count").innerHTML = `${this.timeMachineCount}`;
       document.getElementById("time-machine-cost").innerHTML = `${this.timeMachineCost}`;
       document.getElementById("cookie").src = `res/${this.currentSkin}.png`;
+      document.getElementById("prestige-level").innerHTML = `${this.prestigeLevel}`;
+      document.getElementById("prestige-multiplier").innerHTML = `${this.prestigeMultiplier}`;
+      document.getElementById("prestige-cost").innerHTML = `${this.prestigeCost}`;
     }
   }
 
